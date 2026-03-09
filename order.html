@@ -1,0 +1,81 @@
+<!-- order.html (Order Page - Simplified for Cart) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Kitchen Delights - Order</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Home Kitchen Delights</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="order.html" class="active">Order</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="section-padding">
+        <div class="container">
+            <h2>Your Cart</h2>
+            <div id="cart-items">
+                <!-- Cart items will be loaded here by JavaScript -->
+                <p>Your cart is empty. <a href="menu.html">Browse our menu</a> to add items!</p>
+            </div>
+            <div id="cart-summary" style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 20px;">
+                <p>Total: <span id="cart-total">0.00 PKR</span></p>
+                <button id="checkout-btn" class="btn" disabled>Proceed to Checkout</button>
+            </div>
+
+            <section id="checkout-form" style="display: none; margin-top: 40px; padding: 30px; border: 1px solid #ddd; border-radius: 8px;">
+                <h3>Checkout Details</h3>
+                <form id="order-form">
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Delivery Address:</label>
+                        <textarea id="address" name="address" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="payment-method">Payment Method:</label>
+                        <select id="payment-method" name="payment-method" required>
+                            <option value="">Select Method</option>
+                            <option value="cod">Cash on Delivery</option>
+                            <option value="jazzcash">JazzCash (Coming Soon)</option>
+                            <option value="easypaisa">EasyPaisa (Coming Soon)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn">Place Order</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Home Kitchen Delights. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
